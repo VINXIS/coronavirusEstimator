@@ -44,10 +44,6 @@ func main() {
 	if os.IsNotExist(err) {
 		os.MkdirAll("./results", 0755)
 	}
-	_, err = os.Stat("./images")
-	if os.IsNotExist(err) {
-		os.MkdirAll("./images", 0755)
-	}
 
 	var data []CountryData
 	b, _ := ioutil.ReadFile("./data.json")
@@ -69,7 +65,7 @@ func main() {
 			newResult := predictNextDay(results[j].NewCases[i-1], country)
 
 			results[j].NewCases = append(results[j].NewCases, newResult)
-			dayText += strconv.FormatFloat(newResult, 'f', 0, 64) + " infected in " + country.Name + "\n"
+			dayText += strconv.FormatFloat(newResult/country.Population*100, 'f', 2, 64) + "% infected (" + strconv.FormatFloat(newResult, 'f', 0, 64) + " people) in " + country.Name + "\n"
 		}
 
 		fmt.Println(dayText)
