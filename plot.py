@@ -16,6 +16,9 @@ for file in files:
     dataframe = pd.DataFrame(data).iloc[1:]
     plt.plot(dataframe.index, dataframe, label=re.sub('.json', '', os.path.basename(file)))
 
+plt.title('Expected total cases of COVID-19')
+plt.xlabel('days from now')
+plt.ylabel('# of people infected')
 plt.xticks(np.arange(0, len(dataframe.index), 1))
 plt.grid(b=True, which='both')
 plt.legend()
