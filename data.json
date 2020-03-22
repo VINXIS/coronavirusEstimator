@@ -1,0 +1,54 @@
+[
+    {
+        "Name": "USA",
+        "PreviousCases": [
+            25786,
+            18980,
+            13474,
+            9003,
+            6196,
+            4503
+        ],
+        "Population": 327200000,
+        "AverageRate": 0
+    },
+    {
+        "Name": "UK",
+        "PreviousCases": [
+            5018,
+            3983,
+            3269,
+            2626,
+            1950,
+            1543
+        ],
+        "Population": 66440000,
+        "AverageRate": 0
+    },
+    {
+        "Name": "Italy",
+        "PreviousCases": [
+            53578,
+            47021,
+            41035,
+            35713,
+            31506,
+            27980
+        ],
+        "Population": 60480000,
+        "AverageRate": 0
+    },
+    {
+        "Name": "Canada",
+        "PreviousCases": [
+            1087,
+            873,
+            727,
+            598,
+            441,
+            341
+        ],
+        "Population": 37590000,
+        "AverageRate": 0
+    }
+]
